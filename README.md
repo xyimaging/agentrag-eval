@@ -12,7 +12,7 @@ Evaluated on HotpotQA (n=100, stratified by question type), using `gpt-4o-mini` 
 
 | Pipeline | EM | F1 | API Calls | Est. Cost |
 |----------|----|----|-----------|-----------|
-| **Naive RAG** | **0.44** | **0.55** | 1.0× | $0.028 |
+| **Naive RAG** | **0.44** | **0.55** | **1.0×** | **$0.028** |
 | Self-Reflective RAG | 0.42 | 0.54 | 3.3× | $0.064 |
 | Agentic RAG | 0.37 | 0.53 | 6.2× | $0.136 |
 
