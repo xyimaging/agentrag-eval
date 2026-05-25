@@ -199,4 +199,4 @@ Expected total API cost: ~$0.23 for all three pipelines × 100 questions.
 
 ## Acknowledgements
 
-Built with: [OpenAI Python SDK](https://github.com/openai/openai-python), [Anthropic Python SDK](https://github.com/anthropic/anthropic-sdk-python), [ChromaDB](https://www.trychroma.com/), [sentence-transformers](https://www.sbert.net/), [HotpotQA](https://hotpotqa.github.io/).
+Built with: Claude Code, [OpenAI Python SDK](https://github.com/openai/openai-python), [Anthropic Python SDK](https://github.com/anthropic/anthropic-sdk-python), [ChromaDB](https://www.trychroma.com/), [sentence-transformers](https://www.sbert.net/), [HotpotQA](https://hotpotqa.github.io/).
