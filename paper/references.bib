@@ -1,0 +1,265 @@
+% ============================================================
+% AgentRAG-Eval 项目参考文献库
+% 格式：BibTeX，可直接导入 Overleaf
+% 最后更新：2026-05-21
+% ============================================================
+
+% ── 1. RAG 基础论文 ─────────────────────────────────────────
+
+@inproceedings{lewis2020rag,
+  title     = {Retrieval-Augmented Generation for Knowledge-Intensive {NLP} Tasks},
+  author    = {Lewis, Patrick and Perez, Ethan and Piktus, Aleksandra and Petroni, Fabio and Karpukhin, Vladimir and Goyal, Naman and K{\"u}ttler, Heinrich and Lewis, Mike and Yih, Wen-tau and Rockt{\"a}schel, Tim and Riedel, Sebastian and Kiela, Douwe},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2020},
+  note      = {Foundational RAG paper: retriever + generator joint training}
+}
+
+@inproceedings{guu2020realm,
+  title     = {{REALM}: Retrieval-Augmented Language Model Pre-Training},
+  author    = {Guu, Kelvin and Lee, Kenton and Tung, Zora and Pasupat, Panupong and Chang, Ming-Wei},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2020},
+  note      = {Integrates retrieval into LM pretraining via differentiable retriever}
+}
+
+@inproceedings{karpukhin2020dpr,
+  title     = {Dense Passage Retrieval for Open-Domain Question Answering},
+  author    = {Karpukhin, Vladimir and O{\u{g}}uz, Barlas and Min, Sewon and Lewis, Patrick and Wu, Ledell and Edunov, Sergey and Chen, Danqi and Yih, Wen-tau},
+  booktitle = {Empirical Methods in Natural Language Processing (EMNLP)},
+  year      = {2020},
+  note      = {Dual-encoder dense retrieval; standard baseline for RAG retrieval}
+}
+
+@inproceedings{izacard2021fid,
+  title     = {Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering},
+  author    = {Izacard, Gautier and Grave, Edouard},
+  booktitle = {European Chapter of the ACL (EACL)},
+  year      = {2021},
+  note      = {Fusion-in-Decoder (FiD): reads multiple passages jointly}
+}
+
+@article{borgeaud2022retro,
+  title   = {Improving Language Models by Retrieving from Trillions of Tokens},
+  author  = {Borgeaud, Sebastian and Mensch, Arthur and Hoffmann, Jordan and Cai, Trevor and Rutherford, Eliza and Millican, Katie and others},
+  journal = {International Conference on Machine Learning (ICML)},
+  year    = {2022},
+  note    = {RETRO: retrieval-augmented transformer trained at scale}
+}
+
+% ── 2. 多跳问答数据集 ────────────────────────────────────────
+
+@inproceedings{yang2018hotpotqa,
+  title     = {{HotpotQA}: A Dataset for Diverse, Explainable Multi-hop Question Answering},
+  author    = {Yang, Zhilin and Qi, Peng and Zhang, Saizheng and Bengio, Yoshua and Cohen, William and Salakhutdinov, Ruslan and Manning, Christopher D.},
+  booktitle = {Empirical Methods in Natural Language Processing (EMNLP)},
+  year      = {2018},
+  note      = {Standard multi-hop QA benchmark; our primary evaluation dataset}
+}
+
+@inproceedings{ho2020wikimultihop,
+  title     = {Constructing A Multi-hop {QA} Dataset for Comprehensive Evaluation of Reasoning Steps},
+  author    = {Ho, Xanh and Nguyen, Anh-Khoa Duong and Sugawara, Saku and Aizawa, Akiko},
+  booktitle = {Computational Linguistics (COLING)},
+  year      = {2020},
+  note      = {2WikiMultiHopQA: structured multi-hop QA via Wikipedia entity links}
+}
+
+@article{trivedi2022musique,
+  title   = {{MuSiQue}: Multihop Questions via Single-hop Question Composition},
+  author  = {Trivedi, Harsh and Balasubramanian, Niranjan and Khot, Tushar and Sabharwal, Ashish},
+  journal = {Transactions of the Association for Computational Linguistics (TACL)},
+  year    = {2022},
+  note    = {Harder multi-hop benchmark designed to prevent reasoning shortcuts}
+}
+
+% ── 3. 迭代检索 / 主动检索 ──────────────────────────────────
+
+@inproceedings{jiang2023flare,
+  title     = {Active Retrieval Augmented Generation},
+  author    = {Jiang, Zhengbao and Xu, Frank F. and Gao, Luyu and Sun, Zhiqing and Liu, Qian and Dwivedi-Yu, Jane and Yang, Yiming and Callan, Jamie and Neubig, Graham},
+  booktitle = {Empirical Methods in Natural Language Processing (EMNLP)},
+  year      = {2023},
+  note      = {FLARE: proactive retrieval triggered by low-probability token prediction}
+}
+
+@inproceedings{trivedi2022ircot,
+  title     = {Interleaving Retrieval with Chain-of-Thought Reasoning for Knowledge-Intensive Multi-Step Questions},
+  author    = {Trivedi, Harsh and Balasubramanian, Niranjan and Khot, Tushar and Sabharwal, Ashish},
+  booktitle = {Annual Meeting of the ACL (ACL)},
+  year      = {2023},
+  note      = {IRCoT: interleaves retrieval and CoT reasoning steps}
+}
+
+@inproceedings{shao2023iterretgen,
+  title     = {Enhancing Retrieval-Augmented Large Language Models with Iterative Retrieval-Generation Synergy},
+  author    = {Shao, Zhihong and Gong, Yeyun and Shen, Yelong and Huang, Minlie and Duan, Nan and Chen, Weizhu},
+  booktitle = {Findings of EMNLP},
+  year      = {2023},
+  note      = {ITER-RETGEN: iterative retrieval-generation loop}
+}
+
+@inproceedings{asai2024selfrag,
+  title     = {Self-{RAG}: Learning to Retrieve, Generate, and Critique through Self-Reflection},
+  author    = {Asai, Akari and Wu, Zeqiu and Wang, Yizhong and Sil, Avirup and Hajishirzi, Hannaneh},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2024},
+  note      = {Self-RAG: trains special reflection tokens to decide when to retrieve}
+}
+
+% ── 4. Agentic RAG / 工具调用 Agent ─────────────────────────
+
+@article{singh2025agenticrag,
+  title   = {Agentic Retrieval-Augmented Generation: A Survey on Agentic {RAG}},
+  author  = {Singh, Aditi and Ehtesham, Abul and Kumar, Saket and Khoei, Tala Talaei},
+  journal = {arXiv preprint arXiv:2501.09136},
+  year    = {2025},
+  note    = {Comprehensive survey on Agentic RAG paradigms}
+}
+
+@inproceedings{avatar2024neurips,
+  title     = {{AVATAR}: Optimizing {LLM} Agents for Tool Usage via Contrastive Reasoning},
+  author    = {Anonymous},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2024},
+  note      = {Actor-comparator framework for LLM tool usage optimization}
+}
+
+@inproceedings{yao2023react,
+  title     = {{ReAct}: Synergizing Reasoning and Acting in Language Models},
+  author    = {Yao, Shunyu and Zhao, Jeffrey and Yu, Dian and Du, Nan and Shafran, Izhak and Narasimhan, Karthik and Cao, Yuan},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2023},
+  note      = {ReAct: Thought-Action-Observation loop; foundational agent framework}
+}
+
+@article{prism2025,
+  title   = {{PRISM}: Agentic Retrieval with {LLMs} for Multi-Hop Question Answering},
+  author  = {Anonymous},
+  journal = {arXiv preprint arXiv:2510.14278},
+  year    = {2025},
+  note    = {Agentic retrieval specifically for multi-hop QA}
+}
+
+% ── 5. LLM 推理与工具调用 ────────────────────────────────────
+
+@inproceedings{wei2022cot,
+  title     = {Chain-of-Thought Prompting Elicits Reasoning in Large Language Models},
+  author    = {Wei, Jason and Wang, Xuezhi and Schuurmans, Dale and Bosma, Maarten and Ichter, Brian and Xia, Fei and Chi, Ed and Le, Quoc and Zhou, Denny},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2022},
+  note      = {Chain-of-Thought prompting; foundational for step-by-step reasoning}
+}
+
+@inproceedings{yao2023tot,
+  title     = {Tree of Thoughts: Deliberate Problem Solving with Large Language Models},
+  author    = {Yao, Shunyu and Yu, Dian and Zhao, Jeffrey and Shafran, Izhak and Griffiths, Thomas L. and Cao, Yuan and Narasimhan, Karthik},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2023},
+  note      = {Tree of Thoughts: explores multiple reasoning paths}
+}
+
+@inproceedings{schick2023toolformer,
+  title     = {Toolformer: Language Models Can Teach Themselves to Use Tools},
+  author    = {Schick, Timo and Dwivedi-Yu, Jane and Dess{\`i}, Roberto and Raileanu, Roberta and Lomeli, Maria and Hambro, Eric and Zettlemoyer, Luke and Cancedda, Nicola and Scialom, Thomas},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2023},
+  note      = {Toolformer: self-supervised training for tool use in LMs}
+}
+
+@inproceedings{nakano2022webgpt,
+  title     = {{WebGPT}: Browser-Assisted Question-Answering with Human Feedback},
+  author    = {Nakano, Reiichiro and Hilton, Jacob and Balwit, Abigail and Wu, Jeff and Ouyang, Long and Kim, Christina and others},
+  booktitle = {arXiv preprint arXiv:2112.09332},
+  year      = {2022},
+  note      = {WebGPT: early web-browsing agent for open-domain QA}
+}
+
+% ── 6. LLM 局限性与上下文干扰 ───────────────────────────────
+
+@inproceedings{shi2023distracted,
+  title     = {Large Language Models Can Be Easily Distracted by Irrelevant Context},
+  author    = {Shi, Freda and Chen, Xinyun and Misra, Kanishka and Scales, Nathan and Dohan, David and Chi, Ed H. and Sch{\"a}rli, Nathanael and Zhou, Denny},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2023},
+  note      = {Shows LLMs degrade with noisy/irrelevant retrieved context}
+}
+
+@inproceedings{liu2023lostmiddle,
+  title     = {Lost in the Middle: How Language Models Use Long Contexts},
+  author    = {Liu, Nelson F. and Lin, Kevin and Hewitt, John and Paranjape, Ashwin and Bevilacqua, Michele and Petroni, Fabio and Liang, Percy},
+  booktitle = {Transactions of the Association for Computational Linguistics (TACL)},
+  year      = {2024},
+  note      = {LLMs favor beginning/end of context; middle information is under-used}
+}
+
+@inproceedings{mallen2023popqa,
+  title     = {When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories},
+  author    = {Mallen, Alex and Asai, Akari and Zhong, Victor and Das, Rajarshi and Khashabi, Daniel and Hajishirzi, Hannaneh},
+  booktitle = {Annual Meeting of the ACL (ACL)},
+  year      = {2023},
+  note      = {PopQA: when parametric vs. retrieval knowledge is more reliable}
+}
+
+% ── 7. RAG 评测框架 ──────────────────────────────────────────
+
+@article{es2023ragas,
+  title   = {{RAGAS}: Automated Evaluation of Retrieval Augmented Generation},
+  author  = {Es, Shahul and James, Jithin and Anke, Luis Espinosa and Schockaert, Steven},
+  journal = {arXiv preprint arXiv:2309.15217},
+  year    = {2023},
+  note    = {RAGAS: reference-free evaluation of faithfulness and relevance}
+}
+
+@article{ragbench2024,
+  title   = {{RAGBench}: Explainable Benchmark for Retrieval-Augmented Generation Systems},
+  author  = {Fern, John and Oguz, Renat and Shalyminov, Igor and Pappas, Nikolaos and Yavuz, Semih},
+  journal = {arXiv preprint arXiv:2407.11005},
+  year    = {2024},
+  note    = {100K-sample RAG benchmark with explainable labels}
+}
+
+% ── 8. RAG 综述论文 ──────────────────────────────────────────
+
+@article{gao2023ragsurvey,
+  title   = {Retrieval-Augmented Generation for Large Language Models: A Survey},
+  author  = {Gao, Yunfan and Xiong, Yun and Gao, Xinyu and Jia, Kangxiang and Pan, Jinliu and Bi, Yuxi and Dai, Yi and Sun, Jiawei and Wang, Haofen},
+  journal = {arXiv preprint arXiv:2312.10997},
+  year    = {2023},
+  note    = {Comprehensive RAG survey: naive, advanced, and modular RAG}
+}
+
+@article{ragsurvey2025comprehensive,
+  title   = {Retrieval-Augmented Generation: A Comprehensive Survey of Architectures, Enhancements, and Robustness Frontiers},
+  author  = {Anonymous},
+  journal = {arXiv preprint arXiv:2506.00054},
+  year    = {2025},
+  note    = {Latest comprehensive RAG survey including agentic paradigms}
+}
+
+% ── 9. LLM 基础模型 ──────────────────────────────────────────
+
+@article{openai2023gpt4,
+  title   = {{GPT-4} Technical Report},
+  author  = {{OpenAI}},
+  journal = {arXiv preprint arXiv:2303.08774},
+  year    = {2023},
+  note    = {GPT-4 capabilities and evaluation}
+}
+
+@article{touvron2023llama2,
+  title   = {{Llama} 2: Open Foundation and Fine-Tuned Chat Models},
+  author  = {Touvron, Hugo and Martin, Louis and Stone, Kevin and Albert, Peter and Almahairi, Amjad and Babaei, Yasmine and others},
+  journal = {arXiv preprint arXiv:2307.09288},
+  year    = {2023},
+  note    = {Llama 2: open-source LLM baseline}
+}
+
+% ── 10. Agent 综述 ───────────────────────────────────────────
+
+@inproceedings{agentsurvey2025coling,
+  title     = {A Review of Prominent Paradigms for {LLM}-Based Agents: Tool Use (Including {RAG}), Planning, and Feedback Learning},
+  author    = {Anonymous},
+  booktitle = {International Conference on Computational Linguistics (COLING)},
+  year      = {2025},
+  note      = {Survey on LLM agent paradigms including RAG and tool use}
+}

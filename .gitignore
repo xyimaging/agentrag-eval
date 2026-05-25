@@ -1,0 +1,55 @@
+# Claude Code project settings (contains personal paths)
+.claude/settings.json
+.claude/settings.local.json
+
+# Environment — never commit API keys
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+venv/
+env/
+.venv/
+
+# Generated data and index (reproducible via scripts)
+data/hotpotqa_*.json
+index/chroma_db/
+
+# Generated results (reproducible via scripts)
+results/raw/
+results/tables/
+results/failure_analysis.json
+results/failure_analysis.md
+
+# Keep pre-generated figures for README display
+# results/figures/ is intentionally NOT excluded
+
+# Personal research materials (belong in the blog, not the repo)
+daily_reports/
+paper/sections/
+analysis/
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+paper/*.toc
+paper/*.bbl
+paper/*.blg
