@@ -189,7 +189,7 @@ Expected total API cost: ~$0.23 for all three pipelines × 100 questions.
 ```bibtex
 @misc{agentrag-eval-2026,
   title   = {AgentRAG-Eval: When Does Pipeline Complexity Help in Multi-hop QA?},
-  author  = {[Author]},
+  author  = {Xing Yao},
   year    = {2026},
   url     = {https://github.com/xyimaging/agentrag-eval}
 }
